@@ -6,7 +6,7 @@
 2. docker run hello-word
     -  docker run: docker pull then run it, if the image is not available in the local hub
     - if you do docker run again and again it will run in many different containers, so the thing is with one image we can run multiple containers, if it utilising some port, we can change the ports while running the imageW
-    - ![alt text](image.png)
+    - ![alt text](images/image.png)
 
 
 ##  How to work with docker container
@@ -35,12 +35,12 @@
 
 ##  How to run container interactively: means that will not busy your terminal
 
-1.  docker run busybox
+1.  docker run tomcat
     -   If the image is going to run continuesly, the terminal will be busy to show you the output at real time.
     -   But in most of the cases you don't want to see the output you just want to start the container.
     -   So in technical term you want to run it as background process or it also know as `detached mode`.
 
-2.  docker run -d busybox
+2.  docker run -d tomcat
 
     -   -d is the flag used to run the container in detached mode.
     -   means whatever the task is run in background and keep my terminal free.
@@ -48,7 +48,7 @@
 
 ##  How to run commands inside the `running container`
 
-1.  docker exec -it <container-id> /bin/bash
+1.  docker exec -it `<container-id>` /bin/bash
 
 -   docker run alpine sleep 3600
 -   docker exec -it `<container-id>` sh
@@ -56,9 +56,9 @@
 
 ##  Practice Time
 
-1.  ![alt text](image-1.png)
-2.  ![alt text](image-2.png)
-3.  ![alt text](image-3.png)
+1.  ![alt text](images/image-1.png)
+2.  ![alt text](images/image-2.png)
+3.  ![alt text](images/image-3.png)
 
 -   Answer 1: 3
 -   Answer 2: 2
@@ -89,7 +89,7 @@
 -   npm create vite
 -   npm install
 -   npm run dev
--   ![alt text](image-4.png)
+-   ![alt text](images/image-4.png)
 -   create a file named: `Dockerfile`
 
 -   We will not copy node_modules folder
@@ -208,12 +208,12 @@ CMD ["node", "index.js"]
 
 ##  Docker multi-stage build
 
->   ![alt text](image-5.png) ![alt text](image-6.png)
+>   ![alt text](images/image-5.png) ![alt text](images/image-6.png)
 
 
 ##  Quiz time
 
->   ![alt text](image-9.png) ![alt text](image-7.png) ![alt text](image-8.png)
+>   ![alt text](images/image-9.png) ![alt text](images/image-7.png) ![alt text](images/image-8.png)
 
 
 -   Answer 1: 3
@@ -229,15 +229,15 @@ CMD ["node", "index.js"]
 -   ifconfig
 -   exit
 
--   ![alt text](image-10.png)
--   ![alt text](image-11.png)
+-   ![alt text](images/image-10.png)
+-   ![alt text](images/image-11.png)
  
 -   docker network
 -   docker network ls
 
 ### Bridge, host and overlay networks
 
->   ![alt text](image-12.png)
+>   ![alt text](images/image-12.png)
 
 -   docker network ls
 -   docker network inspect <network-name/bridge>
@@ -268,7 +268,7 @@ docker network create -d macvlan \
 ##  Docker Compose
 
 -   install docker compose if required
->   ![alt text](image-13.png)
+>   ![alt text](images/image-13.png)
 
 -   Create backend app
     -   npm init -y
